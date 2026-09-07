@@ -90,7 +90,7 @@ function renderizarCursos(lista) {
     lista.forEach(curso => {
         const card = document.createElement("div");
         card.classList.add("card-curso");
-        
+
         if (!curso.concluido) {
             card.classList.add("pendente");
         }
