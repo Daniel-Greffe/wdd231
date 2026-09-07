@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,8 +9,9 @@ body {
 }
 
 main {
-    margin: 1rem;
+    margin: 1rem auto;
     padding: 1rem;
+    max-width: 1200px;
 }
 
 header {
@@ -104,6 +106,7 @@ p {
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
     text-align: center;
+    overflow: hidden;
 }
 
 .card h2 {
@@ -115,7 +118,7 @@ p {
 }
 
 .card-body {
-    padding: 2.8rem;
+    padding: 1.5rem;
 }
 
 .intro-section {
@@ -126,12 +129,20 @@ p {
     font-size: 1.1rem;
 }
 
+.intro-section p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
 .eu-img {
     padding-top: 0.6rem;
-    width: 22vw;
+    width: 100%;
+    max-width: 280px;
     height: auto;
     border-radius: 4px;
     border: 1px solid rgb(221, 221, 221);
+    display: block;
+    margin: 0 auto;
 }
 
 .foto {
@@ -232,15 +243,32 @@ p {
 }
 
 footer {
-    background-color: rgb(25, 102, 0);
-    padding: 0.9rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
 }
 
-footer p {
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 20px;
+}
+
+.redes-sociais a img {
+    width: 46px;
+    height: 47px;
+    display: block;
+}
+
+footer p,
+footer span {
     color: rgb(255, 255, 255);
     padding: 0.3rem;
 }
 
-footer span {
-    color: rgb(255, 255, 255);
+.footer-data {
+    background-color: rgb(25, 102, 0);
+    padding: 30px;
+    margin: 0;
 }
