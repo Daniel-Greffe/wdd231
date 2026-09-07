@@ -1,0 +1,51 @@
+@media (max-width: 557px) {
+    .grid-cursos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        background-color: rgb(25, 102, 0);
+        border-bottom: 2px solid rgb(204, 204, 204);
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .titulo {
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    #btn-menu {
+        display: inline-block;
+        color: rgb(2, 2, 2);
+        padding: 2px 10px;
+        font-size: 1.8rem;
+    }
+
+    nav {
+        display: none;
+        margin: 0;
+    }
+
+    nav.aberto {
+        display: block;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation li {
+        border-bottom: 1px solid rgb(68, 68, 68);
+    }
+
+    .navigation a {
+        text-align: left;
+        padding: 0.85rem 1.2rem;
+        font-weight: bold;
+    }
+}

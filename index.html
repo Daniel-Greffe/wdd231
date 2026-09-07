@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 231 – Daniel Greffe Cardoso</title>
-    <meta name="description"content="WDD 231 - Daniel Greffe - Biografia - Minha História">
+    <meta name="description" content="WDD 231 - Daniel Greffe - Biografia - Minha História">
     <meta name="author" content="Daniel Greffe Cardoso">
-    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/maior.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <script src="scripts/obterdata.js" defer></script>
+    <script src="scripts/cursos.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -17,20 +20,23 @@
 
 <body>
     <header>
-        <h1 class="primeiro"> WDD 231 </h1>
-        <nav>
+        <div class="header-container">
+            <h1 class="titulo">Nome do Site</h1>
+
+            <button id="btn-menu" aria-label="Abrir Menu">&#9776;</button>
+        </div>
+
+        <nav id="menu-nav">
             <ul class="navigation">
-                <li><a href="https://www.linkedin.com/in/daniel-greffe-mbs23">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-                <li><a
-                        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=por&id=p27#p27">Escritura</a>
-                </li>
+                <li><a href="#">Página Inicial</a></li>
+                <li><a href="#">Projeto Câmara</a></li>
                 <li><a href="#">Projeto Final</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2 class="nome">Daniel Greffe Cardoso</h2>
+        <h2 class="nome">Página Inicial</h2>
         <div class="content-container">
 
             <section class="card sobre-mim">
@@ -40,10 +46,12 @@
                         <p>Meu nome é Daniel e moro no Brasil. Gosto de aprender coisas novas, conhecer lugares
                             diferentes e aproveitar meu tempo livre com boa comida e momentos ao lado da família. Sou
                             uma pessoa tranquila, organizada e sempre busco evoluir tanto na vida pessoal
-                            quanto profissional. Meu nome é Daniel e moro no Brasil. Gosto de aprender coisas novas, conhecer lugares
+                            quanto profissional. Meu nome é Daniel e moro no Brasil. Gosto de aprender coisas novas,
+                            conhecer lugares
                             diferentes e aproveitar meu tempo livre com boa comida e momentos ao lado da família. Sou
                             uma pessoa tranquila, organizada e sempre busco evoluir tanto na vida pessoal
-                            quanto profissional. Meu nome é Daniel e moro no Brasil. Gosto de aprender coisas novas, conhecer lugares
+                            quanto profissional. Meu nome é Daniel e moro no Brasil. Gosto de aprender coisas novas,
+                            conhecer lugares
                             diferentes e aproveitar meu tempo livre com boa comida e momentos ao lado da família. Sou
                             uma pessoa tranquila, organizada e sempre busco evoluir tanto na vida pessoal
                             quanto profissional.</p>
@@ -51,25 +59,31 @@
                 </div>
             </section>
 
-            <section class="card recursos">
-                <h2>Recursos Web Dev</h2>
-                <div class="card-body">
-
-                    <img src="imagens/minha-foto.jpg" alt="Foto de Mim" class="eu-img">
-
-<!--                     <ul>
-                        <li><a href="#" target="_blank">Comunidade Dev.to</a></li>
-                        <li><a href="#" target="_blank">Revista Smashing</a></li>
-                        <li><a href="#" target="_blank">CSS Tricks</a></li>
-                        <li><a href="#" target="_blank">W3 Schools</a></li>
-                        <li><a href="#" target="_blank">Udemy</a></li>
-                        <li><a href="#" target="_blank">Imagem de Espaço Reservado Lorem Picsum</a>
-                        </li>
-                    </ul> -->
-                </div>
+            <section class="card foto">
+                <h2>Foto</h2>
+                <img src="imagens/minha-foto.jpg" alt="Foto de Mim" class="eu-img">
             </section>
-
         </div>
+
+        <div class="filtro-container">
+            <section class="titulo-cursos">
+                <h2>Cursos</h2>
+            </section>
+            <section class="conteudo-card">
+                <div class="grupo-botoes">
+                    <button class="btn-filtro ativo" data-assunto="todos">Todos</button>
+                    <button class="btn-filtro" data-assunto="CSE">CSE</button>
+                    <button class="btn-filtro" data-assunto="WDD">WDD</button>
+                </div>
+
+                <p class="total-creditos">
+                    O número total de créditos é: <span id="creditos-total">0</span>
+                </p>
+
+                <div id="grid-cursos" class="grid-cursos"></div>
+            </section>
+        </div>
+
     </main>
     <footer>
         <p>&copy; <span id="anoatual"></span> Daniel Greffe Cardoso | Brasil &#x1F1E7;&#x1F1F7; </p>
