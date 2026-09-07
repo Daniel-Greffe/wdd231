@@ -12,12 +12,6 @@
         justify-content: space-between;
     }
 
-    .titulo {
-        color: rgb(255, 255, 255);
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
     #btn-menu {
         display: inline-block;
         color: rgb(2, 2, 2);

@@ -82,11 +82,6 @@ h2 {
     font-size: 2rem;
 }
 
-.titulo {
-    background-color: rgb(25, 102, 0);
-    color: rgb(255, 255, 255);
-}
-
 p {
     text-align: center;
 }
@@ -150,7 +145,8 @@ p {
     background-color: rgb(25, 102, 0);
     color: rgb(255, 255, 255);
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
+    margin-bottom: 2rem;
     font-size: 1.2rem;
 }
 
