@@ -1,0 +1,58 @@
+[
+  {
+    "nome": "Sabah Esfihas",
+    "endereco": "R. Mal. Rondon, 2600 - Centro, Campo Grande - MS, 79002-201",
+    "telefone": "(67) 99857-6881",
+    "site": "https://www.sabahesfihas.com.br",
+    "imagem": "sabah-esfihas.png",
+    "descricao": "Tradicional lanchonete e restaurante de culinária árabe em Campo Grande."
+  },
+  {
+    "nome": "Tok&Stok",
+    "endereco": "Av. Afonso Pena, 4062 - Jardim dos Estados, Campo Grande - MS, 79020-001",
+    "telefone": "(67) 3383-1234",
+    "site": "https://www.tok&stok.com.br",
+    "imagem": "tokstok.png",
+    "descricao": "Fabricação, reforma e comércio de estofados e móveis sob medida."
+  },
+  {
+    "nome": "Casa das Cores",
+    "endereco": "Av. Júlio de Castilho, 311 - Lar do Trab., Campo Grande - MS, 79112-000",
+    "telefone": "(67) 3316-8000",
+    "site": "https://www.casadascores.com.br",
+    "imagem": "casa-das-cores.png",
+    "descricao": "Rede especializada em tintas imobiliárias, automotivas e acessórios para pintura."
+  },
+  {
+    "nome": "Fort Atacadista",
+    "endereco": "Papa João Paulo II - Av. Pres. Vargas, 1336 - Lar do Trab., Campo Grande - MS, 79112-010",
+    "telefone": "(67) 4009-8100",
+    "site": "https://www.fortatacadista.com.br",
+    "imagem": "fort-atacadista.png",
+    "descricao": "Rede de atacarejo com grande variedade de produtos alimentícios e utilidades."
+  },
+  {
+    "nome": "Sôdie Doces",
+    "endereco": "R. Barão do Rio Branco, 1702 - Centro, Campo Grande - MS, 79020-230",
+    "telefone": "(67) 3305-5555",
+    "site": "https://www.sodie.com.br",
+    "imagem": "sodie-doces.png",
+    "descricao": "Confeitaria artesanal especializada em bolos caseiros, tortas e doces."
+  },
+  {
+    "nome": "Santa Casa",
+    "endereco": "R. Eduardo Santos Pereira, 88 - Centro, Campo Grande - MS, 79002-251",
+    "telefone": "(67) 3358-1500",
+    "site": "https://www.saojuliao.org.br",
+    "imagem": "santa-casa.png",
+    "descricao": "Centro hospitalar filantrópico de referência em atendimento humanizado e saúde."
+  },
+  {
+    "nome": "Drogaria Freire",
+    "endereco": "Rua 14 de Julho, 4856 - Centro, Campo Grande - MS, 79010-470",
+    "telefone": "(67) 3321-7000",
+    "site": "https://drogariasfreire.com.br/nossas-lojas",
+    "imagem": "drogaria-freire.png",
+    "descricao": "Farmácia e rede de drogaria tradicional de atendimento à comunidade campo-grandense."
+  }
+]

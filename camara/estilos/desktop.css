@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+  #botao-menu {
+    display: none;
+  }
+
+  #navegacao-principal {
+    display: block;
+    width: auto;
+  }
+
+  .lista-navegacao {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .exibicao-lista .cartao-membro {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .rodape-conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .info-desenvolvimento {
+    text-align: center;
+  }
+}

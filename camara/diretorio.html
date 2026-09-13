@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório de Membros | Câmara de Comércio</title>
+    <meta name="description"
+        content="Diretório de empresas associadas à Câmara de Comércio de Campo Grande MS.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diretório de Membros | Câmara de Comércio">
+    <meta property="og:description" content="Decubra as empresas da Câmara de Comércio de Campo Grande. Conheça os melhores parceiros, extenda sua rede e gere novos 
+        negócios em Campo Grande.">
+    <meta property="og:image" content="https://daniel-greffe.github.io/wdd231/camara/imagens/github.svg">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/diretorio.html">
+
+    <link rel="icon" href="imagens/f4vicon.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/normalizar.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
+    <script src="scripts/diretorio.js" defer></script>
+    <script src="scripts/membros.json" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+            <div class="logotipo-container">
+                <img src="imagens/f4vicon.png" alt="Logotipo da Câmara de Comércio" class="logotipo-img">
+                <div class="titulos-camara">
+                    <span class="titulo-site">Câmara de Comércio</span>
+                </div>
+            </div>
+
+            <button id="botao-menu" aria-label="Abrir Menu de Navegação">
+                <span class="icone-hamburguer"></span>
+            </button>
+
+            <nav id="navegacao-principal">
+                <ul class="lista-navegacao">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="diretorio.html" class="ativo">Diretório</a></li>
+                    <li><a href="#">Associar-se</a></li>
+                    <li class="item-dropdown">
+                        <a href="#">Descobrir</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section class="secao-cabecalho-diretorio">
+            <h1>Diretório de Empresas</h1>
+            <div class="controles-visualizacao">
+                <button id="botao-grade" class="ativo" aria-label="Exibir em Grade">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" />
+                    </svg>
+                </button>
+                <button id="botao-lista" aria-label="Exibir em Lista">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <div id="container-membros" class="exibicao-grade"></div>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="info-contato">
+                <p><strong>Câmara de Comércio - Campo Grande</strong></p>
+                <p>Av. Dr. João Rosa Píres, 859 - MS, 79008-050</p>
+                <p>camar4comercialcg@gmail.com</p>
+                <p>(67) 9967-0067</p>
+            </div>
+            <div class="faixa-redes-sociais">
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="imagens/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <img src="imagens/github.svg" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+            <div class="info-desenvolvimento">
+                <p>Desenvolvido por Daniel Greffe Cardoso</p>
+                <p>&copy; <span id="ano-atual"></span> | Câmara de Comércio</p>
+                <p id="ultima-modificacao"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
