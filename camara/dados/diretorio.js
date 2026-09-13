@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function carregarMembros() {
     try {
-      const res = await fetch("scripts/membros.json");
+      const res = await fetch("dados/membros.json");
       if (!res.ok) {
         throw new Error(`Erro ao carregar JSON: ${res.status}`);
       }
