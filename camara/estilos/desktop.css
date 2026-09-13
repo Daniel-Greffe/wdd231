@@ -3,6 +3,10 @@
     display: none;
   }
 
+  #container-membros {
+  min-height: 500px; 
+}
+
   #navegacao-principal {
     display: block;
     width: auto;
@@ -14,23 +18,42 @@
     margin-top: 0;
     gap: 0.5rem;
   }
-}
-
-@media (min-width: 768px) {
   .exibicao-lista .cartao-membro {
     grid-template-columns: 2fr 1fr;
     align-items: center;
   }
-}
 
-@media (min-width: 768px) {
   .rodape-conteudo {
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
+    text-align: center;
+  }
+
+  .rodape-principal {
+    padding: 2rem 3rem;
+    flex-direction: row;
   }
 
   .info-desenvolvimento {
     text-align: center;
   }
+
+  .cartao-membro a {
+    color: #0044cc; 
+    text-decoration: underline; 
+}
+
+.cartao-membro a:hover,
+.cartao-membro a:focus {
+    color: #002266;
+}
+
+.cartao-membro {
+    color: #222222;
+}
+
+.cartao-membro p {
+    color: #333333; 
+}
+
 }
