@@ -3,12 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnMenuToggle = document.getElementById("botao-menu");
   const navMenu = document.getElementById("navegacao-principal");
 
-  btnMenuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("aberto");
-    btnMenuToggle.classList.toggle("aberto");
-  });
+  if (btnMenuToggle && navMenu) {
+    btnMenuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("aberto");
+      btnMenuToggle.classList.toggle("aberto");
+    });
+  }
 
   const gridMembros = document.getElementById("container-membros");
+
+  // Função para converter número em texto do nível de associação
+  function obterTextoNivel(nivel) {
+    switch (nivel) {
+      case 3:
+        return "Membro Ouro";
+      case 2:
+        return "Membro Prata";
+      case 1:
+      default:
+        return "Membro Bronze";
+    }
+  }
 
   async function carregarMembros() {
     try {
@@ -31,10 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const itemCard = document.createElement("section");
       itemCard.className = "cartao-membro";
 
+      const nivelTexto = obterTextoNivel(item.nivelAssociacao);
+
       itemCard.innerHTML = `
         <img src="imagens/${item.imagem}" alt="Logotipo da empresa ${item.nome}" loading="lazy" width="110" height="110">
         <div>
           <h2>${item.nome}</h2>
+          <p class="descricao-empresa"><strong>Nível:</strong> ${nivelTexto}</p>
           <p class="descricao-empresa">${item.descricao}</p>
           <p>${item.endereco}</p>
           <p>${item.telefone}</p>
@@ -49,19 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnModoGrade = document.getElementById("botao-grade");
   const btnModoLista = document.getElementById("botao-lista");
 
-  btnModoGrade.addEventListener("click", () => {
-    gridMembros.classList.add("exibicao-grade");
-    gridMembros.classList.remove("exibicao-lista");
-    btnModoGrade.classList.add("ativo");
-    btnModoLista.classList.remove("ativo");
-  });
+  if (btnModoGrade && btnModoLista) {
+    btnModoGrade.addEventListener("click", () => {
+      gridMembros.classList.add("exibicao-grade");
+      gridMembros.classList.remove("exibicao-lista");
+      btnModoGrade.classList.add("ativo");
+      btnModoLista.classList.remove("ativo");
+    });
 
-  btnModoLista.addEventListener("click", () => {
-    gridMembros.classList.add("exibicao-lista");
-    gridMembros.classList.remove("exibicao-grade");
-    btnModoLista.classList.add("ativo");
-    btnModoGrade.classList.remove("ativo");
-  });
+    btnModoLista.addEventListener("click", () => {
+      gridMembros.classList.add("exibicao-lista");
+      gridMembros.classList.remove("exibicao-grade");
+      btnModoLista.classList.add("ativo");
+      btnModoGrade.classList.remove("ativo");
+    });
+  }
 
   const rotuloAno = document.getElementById("ano-atual");
   const rotuloModificacao = document.getElementById("ultima-modificacao");

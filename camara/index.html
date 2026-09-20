@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página inicial | Câmara de Comércio</title>
-    <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Campo Grande MS.">
+    <title>Página Inicial | Câmara de Comércio de Campo Grande</title>
+    <meta name="description" content="Bem-vindo à Câmara de Comércio de Campo Grande MS. Fique por dentro dos eventos, previsão do tempo local e empresas em destaque na nossa região.">
     <meta name="author" content="Daniel Greffe Cardoso">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Página inicial | Câmara de Comércio">
+    <meta property="og:title" content="Página Inicial | Câmara de Comércio">
     <meta property="og:description" content="Descubra as empresas da Câmara de Comércio de Campo Grande. Conheça os melhores parceiros, extenda sua rede e gere novos negócios em Campo Grande.">
     <meta property="og:image" content="https://daniel-greffe.github.io/wdd231/camara/imagens/github.svg">
     <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/index.html">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="estilos/mobile.css">
     <link rel="stylesheet" href="estilos/desktop.css">
     
-    <script src="scripts/diretorio.js" defer></script>
+    <script src="scripts/inicio.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
     <header class="cabecalho-principal">
         <div class="cabecalho-conteudo">
             <div class="logotipo-container">
-                <img src="imagens/f4vicon.png" alt="Logotipo da Câmara de Comércio" class="logotipo-img">
+                <img src="imagens/f4vicon.png" alt="Logotipo da Câmara de Comércio" class="logotipo-img" width="80" height="80">
                 <div class="titulos-camara">
                     <span class="titulo-site">Página Inicial</span>
                 </div>
@@ -53,11 +53,65 @@
         </div>
     </header>
 
-  <main>
-    
-  </main>
+    <main id="conteudo-principal">
+        <!-- Hero Image + Call To Action -->
+        <section class="secao-hero">
+            <img src="imagens/hero-campo-grande.webp" alt="Vista panorâmica da cidade de Campo Grande MS" class="imagem-hero" width="1200" height="450" loading="eager">
+            <div class="caixa-cta">
+                <p>Junte-se à nossa rede comercial!</p>
+                <a href="#" class="botao-cta">Associe-se</a>
+            </div>
+        </section>
 
-   <footer class="rodape-principal">
+        <h1 class="titulo-boas-vindas">Início</h1>
+
+        <!-- Grid para Eventos e Clima conforme Wireframe -->
+        <div class="grade-informacoes-inicio">
+            <!-- Eventos -->
+            <section class="cartao-info secao-eventos">
+                <header class="cabecalho-cartao">
+                    <h2>Eventos Recentes</h2>
+                </header>
+                <div class="corpo-cartao">
+                    <ul>
+                        <li><strong>15 de Outubro:</strong> Feira de Negócios e Inovação Local - Centro de Convenções.</li>
+                        <li><strong>22 de Outubro:</strong> Workshop de Marketing Digital para PMEs.</li>
+                        <li><strong>05 de Novembro:</strong> Encontro Anual de Empresários de Campo Grande.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Clima Atual -->
+            <section class="cartao-info secao-clima">
+                <header class="cabecalho-cartao">
+                    <h2>Clima Atual</h2>
+                </header>
+                <div class="corpo-cartao" id="dados-clima-atual">
+                    <p>Carregando dados do tempo...</p>
+                </div>
+            </section>
+
+            <!-- Previsão do Tempo (3 dias) -->
+            <section class="cartao-info secao-previsao">
+                <header class="cabecalho-cartao">
+                    <h2>Previsão de Clima</h2>
+                </header>
+                <div class="corpo-cartao" id="dados-previsao-clima">
+                    <p>Carregando previsão...</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Seção de Destaques de Empresas (Ouro/Prata Aleatórios) -->
+        <section class="secao-destaques">
+            <h2>Empresas em Destaque</h2>
+            <div id="container-destaques" class="grade-destaques">
+                <!-- Inserido dinamicamente via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-principal">
         <div class="rodape-conteudo">
             <div class="info-contato">
                 <p><strong>Câmara de Comércio - Campo Grande</strong></p>
@@ -68,10 +122,10 @@
             <div class="faixa-redes-sociais">
                 <div class="redes-sociais">
                     <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                        <img src="imagens/instagram.svg" alt="Instagram">
+                        <img src="imagens/instagram.svg" alt="Instagram" width="50" height="50">
                     </a>
                     <a href="https://github.com" target="_blank" aria-label="GitHub">
-                        <img src="imagens/github.svg" alt="GitHub">
+                        <img src="imagens/github.svg" alt="GitHub" width="50" height="50">
                     </a>
                 </div>
             </div>
