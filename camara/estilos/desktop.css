@@ -3,10 +3,6 @@
     display: none;
   }
 
-  #container-membros {
-    min-height: 500px; 
-  }
-
   #navegacao-principal {
     display: block;
     width: auto;
@@ -19,45 +15,6 @@
     gap: 0.5rem;
   }
 
-  .exibicao-lista .cartao-membro {
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-  }
-
-  .rodape-conteudo {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  .rodape-principal {
-    padding: 2rem 3rem;
-    flex-direction: row;
-  }
-
-  .info-desenvolvimento {
-    text-align: center;
-  }
-
-  .cartao-membro a {
-    color: #0044cc; 
-    text-decoration: underline; 
-  }
-
-  .cartao-membro a:hover,
-  .cartao-membro a:focus {
-    color: #002266;
-  }
-
-  .cartao-membro {
-    color: #222222;
-  }
-
-  .cartao-membro p {
-    color: #333333; 
-  }
-
-  /* --- Estilos Adicionais do Wireframe para Desktop (Semana 3) --- */
   .imagem-hero {
     height: 380px;
   }
@@ -66,14 +23,7 @@
     display: block;
   }
 
-  /* Layout de 3 colunas para Eventos, Clima e Previsão conforme Wireframe */
-  .grade-informacoes-inicio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  /* Layout de 3 colunas para as Empresas em Destaque */
+  .grade-informacoes-inicio,
   .grade-destaques {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -83,5 +33,19 @@
   .conteudo-destaque {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  .exibicao-lista .cartao-membro {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+
+  .rodape-conteudo {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .rodape-principal {
+    padding: 2rem 3rem;
   }
 }

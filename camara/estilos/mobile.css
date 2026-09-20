@@ -7,14 +7,10 @@
   --cor-texto-secundario: #4a4a4a;
   --cor-linha-divisoria: #dcdcdc;
   --cor-linha-alternada: #e6f0eb;
+  --cor-link: #0044cc;
+  --cor-link-hover: #002266;
   --fonte-sistema: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --sombra-padrao: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --sombra-padrao: 0 4px 12px #00000014;
 }
 
 body {
@@ -26,10 +22,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#container-membros {
-  min-height: 500px; 
-}
-
+/* Header & Navegação */
 .cabecalho-principal {
   background-color: var(--cor-marca);
   color: #ffffff;
@@ -104,19 +97,14 @@ body {
   padding: 0.6rem 1rem;
   display: block;
   border-radius: 4px;
-  background: none;
-  border: none;
   font-size: 1rem;
-  cursor: pointer;
-  width: 100%;
   text-align: left;
 }
 
 .lista-navegacao a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #ffffff33;
 }
 
-/* Wayfinding */
 .lista-navegacao a.ativo {
   background-color: #ffffff;
   color: var(--cor-marca);
@@ -124,13 +112,13 @@ body {
   text-decoration: underline;
 }
 
+/* Conteúdo Principal & Hero */
 #conteudo-principal {
   max-width: 1200px;
   margin: 1.5rem auto;
   padding: 0 1rem;
 }
 
-/* --- Hero Image & Call to Action (Semana 3) --- */
 .secao-hero {
   position: relative;
   width: 100%;
@@ -144,14 +132,13 @@ body {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  display: block;
 }
 
 .caixa-cta {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: #000000bf;
   color: #ffffff;
   padding: 0.8rem 1.2rem;
   border-radius: 6px;
@@ -159,7 +146,7 @@ body {
 }
 
 .caixa-cta p {
-  display: none; /* Esconde texto em telas muito pequenas para economizar espaço */
+  display: none;
   font-size: 0.85rem;
   margin-bottom: 0.3rem;
 }
@@ -172,7 +159,6 @@ body {
   font-weight: bold;
   text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.3s;
 }
 
 .botao-cta:hover, .botao-cta:focus {
@@ -185,7 +171,7 @@ body {
   color: var(--cor-marca);
 }
 
-/* --- Seções de Informação (Eventos & Clima) --- */
+/* Cards de Informação & Clima */
 .grade-informacoes-inicio {
   display: flex;
   flex-direction: column;
@@ -225,7 +211,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Clima Layout Interno */
 .container-clima-detalhes {
   display: flex;
   align-items: center;
@@ -248,7 +233,7 @@ body {
   margin-bottom: 0.4rem;
 }
 
-/* --- Destaques de Empresas (Ouro/Prata) --- */
+/* Seção Destaques */
 .secao-destaques {
   margin-top: 2rem;
 }
@@ -308,13 +293,26 @@ body {
   margin-bottom: 0.3rem;
 }
 
-.info-destaque a {
-  color: #0044cc;
+/* Estilos de Links Globais em Cartões */
+.cartao-destaque a,
+.cartao-membro a {
+  color: var(--cor-link);
   text-decoration: underline;
   word-break: break-all;
 }
 
-/* --- Estilos do Diretório (Semana 2) --- */
+.cartao-destaque a:hover,
+.cartao-membro a:hover,
+.cartao-destaque a:focus,
+.cartao-membro a:focus {
+  color: var(--cor-link-hover);
+}
+
+/* Diretório de Membros */
+#container-membros {
+  min-height: 500px; 
+}
+
 .secao-cabecalho-diretorio {
   display: flex;
   justify-content: space-between;
@@ -339,7 +337,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s;
 }
 
 .controles-visualizacao button.ativo,
@@ -391,13 +388,6 @@ body {
   margin-bottom: 0.8rem;
 }
 
-.exibicao-grade .cartao-membro a {
-  color: #0044cc;
-  text-decoration: underline;
-  word-break: break-all;
-  font-size: 0.9rem;
-}
-
 .exibicao-lista {
   display: flex;
   flex-direction: column;
@@ -423,11 +413,6 @@ body {
 .exibicao-lista .cartao-membro h2 {
   font-size: 1.1rem;
   color: var(--cor-destaque);
-}
-
-.exibicao-lista .cartao-membro a {
-  color: #0044cc;
-  text-decoration: underline;
 }
 
 /* Rodapé */
@@ -461,24 +446,5 @@ body {
 .redes-sociais a img {
   width: 50px;
   height: 50px;
-  display: block;
   filter: invert(100%);
-}
-
-.cartao-membro a {
-  color: #0044cc;
-  text-decoration: underline;
-}
-
-.cartao-membro a:hover,
-.cartao-membro a:focus {
-  color: #002266;
-}
-
-.cartao-membro {
-  color: #222222;
-}
-
-.cartao-membro p {
-  color: #333333;
 }

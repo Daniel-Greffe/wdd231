@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const gridMembros = document.getElementById("container-membros");
 
-  // Função para converter número em texto do nível de associação
   function obterTextoNivel(nivel) {
     switch (nivel) {
       case 3:
