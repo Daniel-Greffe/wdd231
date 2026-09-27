@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const btnMenuToggle = document.getElementById("botao-menu");
   const navMenu = document.getElementById("navegacao-principal");
 
@@ -12,8 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const rotuloAno = document.getElementById("ano-atual");
   const rotuloModificacao = document.getElementById("ultima-modificacao");
 
-  if (rotuloAno) rotuloAno.textContent = new Date().getFullYear();
-  if (rotuloModificacao) rotuloModificacao.textContent = `Última modificação: ${document.lastModified}`;
+  if (rotuloAno) {
+    rotuloAno.textContent = new Date().getFullYear();
+  }
+
+  if (rotuloModificacao) {
+    rotuloModificacao.textContent = `Última modificação: ${document.lastModified}`;
+  }
 
   const apiKey = "66c08e7626811205bf5d7f699b67ac9b";
   const lat = "-20.4697"; 
@@ -22,39 +28,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlClimaAtual = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
   const urlPrevisao = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`;
 
-async function buscarDadosClima() {
+  async function buscarDadosClima() {
+    const containerAtual = document.getElementById("dados-clima-atual") || document.getElementById("clima-atual");
+    const containerPrevisao = document.getElementById("dados-previsao-clima") || document.getElementById("previsao-clima");
+
     try {
       const respAtual = await fetch(urlClimaAtual);
       
       if (!respAtual.ok) {
-        const textoErro = await respAtual.text();
-        console.error("Erro no fetch do Clima Atual:", respAtual.status, textoErro);
-        throw new Error(`Erro na API: ${respAtual.status}`);
+        throw new Error(`Erro na API do Clima: ${respAtual.status}`);
       }
 
       const dadosAtual = await respAtual.json();
-      exibirClimaAtual(dadosAtual);
+      if (containerAtual) exibirClimaAtual(dadosAtual, containerAtual);
 
       const respPrevisao = await fetch(urlPrevisao);
       
       if (respPrevisao.ok) {
         const dadosPrevisao = await respPrevisao.json();
-
-        exibirPrevisaoClima(dadosAtual, dadosPrevisao);
+        if (containerPrevisao) exibirPrevisaoClima(dadosAtual, dadosPrevisao, containerPrevisao);
       } else {
-        console.error("Erro no fetch da Previsão:", respPrevisao.status, respPrevisao.statusText);
-        document.getElementById("dados-previsao-clima").innerHTML = "<p>Não foi possível carregar a previsão.</p>";
+        if (containerPrevisao) containerPrevisao.innerHTML = "<p>Não foi possível carregar a previsão.</p>";
       }
 
     } catch (erro) {
       console.error("Falha ao buscar clima:", erro);
-      document.getElementById("dados-clima-atual").innerHTML = "<p>Não foi possível carregar o clima atual.</p>";
-      document.getElementById("dados-previsao-clima").innerHTML = "<p>Não foi possível carregar a previsão.</p>";
+      if (containerAtual) containerAtual.innerHTML = "<p>Erro ao carregar dados do tempo.</p>";
+      if (containerPrevisao) containerPrevisao.innerHTML = "<p>Erro ao carregar previsão.</p>";
     }
   }
 
-  function exibirClimaAtual(dados) {
-    const container = document.getElementById("dados-clima-atual");
+  function exibirClimaAtual(dados, container) {
     const temp = Math.round(dados.main.temp);
     const tempMax = Math.round(dados.main.temp_max);
     const tempMin = Math.round(dados.main.temp_min);
@@ -81,8 +85,7 @@ async function buscarDadosClima() {
     `;
   }
 
-  function exibirPrevisaoClima(dadosAtual, dadosPrevisao) {
-    const container = document.getElementById("dados-previsao-clima");
+  function exibirPrevisaoClima(dadosAtual, dadosPrevisao, container) {
     container.innerHTML = "";
 
     const pHoje = document.createElement("p");
@@ -108,34 +111,44 @@ async function buscarDadosClima() {
   }
 
   async function carregarDestaques() {
-    try {
-      const res = await fetch("scripts/membros.json");
-      if (!res.ok) throw new Error("Erro ao carregar membros.json");
-      
-      const todosMembros = await res.json();
-      
-      const qualificados = todosMembros.filter(m => m.nivelAssociacao === 2 || m.nivelAssociacao === 3);
+    const container = document.getElementById("container-destaques");
+    if (!container) return;
 
-      const embaralhados = qualificados.sort(() => 0.5 - Math.random());
+    const caminhosJSON = ["membros.json", "scripts/membros.json", "data/membros.json", "../membros.json"];
+    let todosMembros = null;
 
-      const selecionados = embaralhados.slice(0, 3);
-
-      renderizarDestaques(selecionados);
-    } catch (erro) {
-      console.error(erro);
-      document.getElementById("container-destaques").innerHTML = "<p>Erro ao carregar empresas em destaque.</p>";
+    for (const caminho of caminhosJSON) {
+      try {
+        const res = await fetch(caminho);
+        if (res.ok) {
+          todosMembros = await res.json();
+          break;
+        }
+      } catch (e) {
+      }
     }
+
+    if (!todosMembros) {
+      console.error("Não foi possível encontrar o arquivo membros.json");
+      container.innerHTML = "<p>Não foi possível carregar as empresas em destaque.</p>";
+      return;
+    }
+
+    const qualificados = todosMembros.filter(m => m.nivelAssociacao === 2 || m.nivelAssociacao === 3);
+    const embaralhados = qualificados.sort(() => 0.5 - Math.random());
+    const selecionados = embaralhados.slice(0, 3);
+
+    renderizarDestaques(selecionados, container);
   }
 
-  function renderizarDestaques(membros) {
-    const container = document.getElementById("container-destaques");
+  function renderizarDestaques(membros, container) {
     container.innerHTML = "";
 
     membros.forEach(membro => {
       const cartao = document.createElement("section");
       cartao.className = "cartao-destaque";
 
-      const nivelTexto = membro.nivelAssociacao === 3 ? "Membro Ouro" : "Membro Prata";
+      const nivelTexto = membro.nivelAssociacao === 3 ? "Membro Ouro 🥇" : "Membro Prata 🥈";
 
       cartao.innerHTML = `
         <div class="cabecalho-destaque">

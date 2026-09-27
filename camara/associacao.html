@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associar-se | Câmara de Comércio</title>
+    <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Campo Grande MS.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Associe-se | Câmara de Comércio">
+    <meta property="og:description"
+        content="Obrigado por se associar à Câmara de Comércio de Campo Grande, segue o modelo dos seus dados cadastrados.">
+    <meta property="og:image" content="https://daniel-greffe.github.io/wdd231/camara/imagens/github.svg">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/associacao.html">
+
+    <link rel="icon" href="imagens/f4vicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/normalizar.css">
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css">
+
+    <script src="scripts/associacao.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+            <div class="logotipo-container">
+                <img src="imagens/f4vicon.png" alt="Logotipo da Câmara de Comércio" class="logotipo-img">
+                <div class="titulos-camara">
+                    <span class="titulo-site">Câmara de Comércio</span>
+                </div>
+            </div>
+
+            <button id="botao-menu" aria-label="Abrir Menu de Navegação">
+                <span class="icone-hamburguer"></span>
+            </button>
+
+            <nav id="navegacao-principal">
+                <ul class="lista-navegacao">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="diretorio.html">Diretório</a></li>
+                    <li><a href="associacao.html" class="ativo">Associar-se</a></li>
+                    <li><a href="#">Descobrir</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="join-container">
+        <h2>Associe-se à Nossa Câmara</h2>
+
+        <div class="join-layout">
+            <form method="get" action="agradecimento.html" class="join-form">
+                <label>
+                    Nome*
+                    <input type="text" name="nome" id="nome" required autocomplete="given-name"
+                        title="Digite seu primeiro nome">
+                </label>
+
+                <label>
+                    Sobrenome*
+                    <input type="text" name="sobrenome" id="sobrenome" required autocomplete="family-name"
+                        title="Digite seu sobrenome">
+                </label>
+
+                <label>
+                    Cargo na Organização
+                    <input type="text" name="cargo" id="cargo" autocomplete="organization-title"
+                        title="Cargo (Mínimo de 7 caracteres contendo apenas letras, hifens e espaços)"
+                        pattern="[A-Za-zÀ-ÿ\s\-]{7,}">
+                </label>
+
+                <label>
+                    E-mail*
+                    <input type="email" name="email" id="email" required autocomplete="email"
+                        placeholder="seuemail@exemplo.com" title="Insira um endereço de e-mail válido">
+                </label>
+
+                <label>
+                    Número de Celular*
+                    <input type="tel" name="telefone" id="telefone" required autocomplete="tel"
+                        title="Insira seu número de telefone com DDD">
+                </label>
+
+                <label>
+                    Nome da Empresa / Organização*
+                    <input type="text" name="organizacao" id="organizacao" required autocomplete="organization"
+                        title="Nome completo da empresa ou instituição">
+                </label>
+
+                <label class="select-label">
+                    Nível de Associação*
+                    <select name="nivel" id="nivel" required title="Selecione o nível de associação desejado">
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="np">Associação NP (Sem fins lucrativos - Gratuita)</option>
+                        <option value="bronze">Associação Bronze</option>
+                        <option value="silver">Associação Prata</option>
+                        <option value="gold">Associação Ouro</option>
+                    </select>
+                </label>
+
+                <label>
+                    Descrição da Atividade / Organização
+                    <textarea name="descricao" id="descricao" rows="4"
+                        title="Descreva brevemente as atividades da sua organização"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit" class="submit-btn">Enviar Inscrição</button>
+            </form>
+
+            <section class="cards-container">
+                <h3>Níveis de Associação</h3>
+
+                <div class="card np-card">
+                    <h4>Associação NP</h4>
+                    <p>Para organizações sem fins lucrativos.</p>
+                    <button type="button" class="open-modal" data-modal="modal-np">Saiba mais</button>
+                </div>
+
+                <div class="card bronze-card">
+                    <h4>Associação Bronze</h4>
+                    <p>Ideal para pequenas empresas locais.</p>
+                    <button type="button" class="open-modal" data-modal="modal-bronze">Saiba mais</button>
+                </div>
+
+                <div class="card silver-card">
+                    <h4>Associação Prata</h4>
+                    <p>Aceleração e visibilidade no mercado.</p>
+                    <button type="button" class="open-modal" data-modal="modal-silver">Saiba mais</button>
+                </div>
+
+                <div class="card gold-card">
+                    <h4>Associação Ouro</h4>
+                    <p>Benefícios exclusivos e posição de destaque.</p>
+                    <button type="button" class="open-modal" data-modal="modal-gold">Saiba mais</button>
+                </div>
+            </section>
+        </div>
+
+        <dialog id="modal-np" class="membership-modal">
+            <button class="close-modal" aria-label="Fechar Modal">❌</button>
+            <h3>Benefícios - Associação NP</h3>
+            <p>Isenção total de taxas para ONGs e instituições públicas. Inclui listagem no diretório e convite para
+                eventos comunitários.</p>
+        </dialog>
+
+        <dialog id="modal-bronze" class="membership-modal">
+            <button class="close-modal" aria-label="Fechar Modal">❌</button>
+            <h3>Benefícios - Associação Bronze</h3>
+            <p>Acesso a treinamentos básicos, presença no diretório da câmara e despesas com desconto em eventos
+                trimestrais.</p>
+        </dialog>
+
+        <dialog id="modal-silver" class="membership-modal">
+            <button class="close-modal" aria-label="Fechar Modal">❌</button>
+            <h3>Benefícios - Associação Prata</h3>
+            <p>Todos os benefícios Bronze + Publicidade mensal em redes sociais e convites para workshops de liderança.
+            </p>
+        </dialog>
+
+        <dialog id="modal-gold" class="membership-modal">
+            <button class="close-modal" aria-label="Fechar Modal">❌</button>
+            <h3>Benefícios - Associação Ouro</h3>
+            <p>Todos os benefícios Prata + Posicionamento em destaque na Página Inicial, estande em feiras e suporte de
+                rede VIP.</p>
+        </dialog>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <div class="info-contato">
+                <p><strong>Câmara de Comércio - Campo Grande</strong></p>
+                <p>Av. Dr. João Rosa Píres, 859 - MS, 79008-050</p>
+                <p>camar4comercialcg@gmail.com</p>
+                <p>(67) 9967-0067</p>
+            </div>
+            <div class="faixa-redes-sociais">
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="imagens/instagram.svg" alt="Instagram" width="50" height="50">
+                    </a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub">
+                        <img src="imagens/github.svg" alt="GitHub" width="50" height="50">
+                    </a>
+                </div>
+            </div>
+            <div class="info-desenvolvimento">
+                <p>Desenvolvido por Daniel Greffe Cardoso</p>
+                <p>&copy; <span id="ano-atual"></span> | Câmara de Comércio</p>
+                <p id="ultima-modificacao"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

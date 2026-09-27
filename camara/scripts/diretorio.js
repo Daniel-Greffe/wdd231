@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function obterTextoNivel(nivel) {
     switch (nivel) {
       case 3:
-        return "Membro Ouro";
+        return "Membro Ouro 🥇";
       case 2:
-        return "Membro Prata";
+        return "Membro Prata 🥈";
       case 1:
       default:
-        return "Membro Bronze";
+        return "Membro Bronze 🥉";
     }
   }
 

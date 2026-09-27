@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretório de Membros | Câmara de Comércio</title>
+    <title>Associar-se | Câmara de Comércio</title>
     <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Campo Grande MS.">
     <meta name="author" content="Daniel Greffe Cardoso">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Diretório de Membros | Câmara de Comércio">
-    <meta property="og:description" content="Descubra as empresas da Câmara de Comércio de Campo Grande. Conheça os melhores parceiros, extenda sua rede e gere novos negócios em Campo Grande.">
+    <meta property="og:title" content="Agradecimento | Câmara de Comércio">
+    <meta property="og:description"
+        content="Obrigado por se associar à Câmara de Comércio de Campo Grande, segue o modelo dos seus dados cadastrados.">
     <meta property="og:image" content="https://daniel-greffe.github.io/wdd231/camara/imagens/github.svg">
-    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/diretorio.html">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/agradecimento.html">
 
     <link rel="icon" href="imagens/f4vicon.png">
 
@@ -23,8 +24,8 @@
     <link rel="stylesheet" href="estilos/normalizar.css">
     <link rel="stylesheet" href="estilos/mobile.css">
     <link rel="stylesheet" href="estilos/desktop.css">
-    
-    <script src="scripts/diretorio.js" defer></script>
+
+    <script src="scripts/agradecimento.js" defer></script>
 </head>
 
 <body>
@@ -45,35 +46,21 @@
             <nav id="navegacao-principal">
                 <ul class="lista-navegacao">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="diretorio.html" class="ativo">Diretório</a></li>
-                    <li><a href="associacao.html">Associar-se</a></li>
+                    <li><a href="diretorio.html">Diretório</a></li>
+                    <li><a href="associacao.html" class="ativo">Associar-se</a></li>
                     <li><a href="#">Descobrir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="conteudo-principal">
-        <section class="secao-cabecalho-diretorio">
-            <h1>Diretório de Empresas</h1>
-            <div class="controles-visualizacao">
-                <button id="botao-grade" class="ativo" aria-label="Exibir em Grade">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm6 0h4v4h-4V4zM4 10h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4z" />
-                    </svg>
-                </button>
-                <button id="botao-lista" aria-label="Exibir em Lista">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
-                    </svg>
-                </button>
-            </div>
-        </section>
+    <main class="thank-you-container">
+        <h2>Obrigado por se associar!</h2>
+        <p>Recebemos a sua solicitação. Abaixo estão os dados cadastrados em nosso sistema:</p>
 
-        <div id="container-membros" class="exibicao-grade"></div>
+        <div class="summary-card" id="formDataDisplay">
+        </div>
     </main>
-
     <footer class="rodape-principal">
         <div class="rodape-conteudo">
             <div class="info-contato">
@@ -85,10 +72,10 @@
             <div class="faixa-redes-sociais">
                 <div class="redes-sociais">
                     <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                        <img src="imagens/instagram.svg" alt="Instagram">
+                        <img src="imagens/instagram.svg" alt="Instagram" width="50" height="50">
                     </a>
                     <a href="https://github.com" target="_blank" aria-label="GitHub">
-                        <img src="imagens/github.svg" alt="GitHub">
+                        <img src="imagens/github.svg" alt="GitHub" width="50" height="50">
                     </a>
                 </div>
             </div>
