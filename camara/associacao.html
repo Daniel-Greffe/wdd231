@@ -96,15 +96,29 @@
                         title="Nome completo da empresa ou instituição">
                 </label>
 
-                <label for="membership-level">Nível de Membresia:
-                    <select id="membership-level" name="membership-level" required>
-                        <option value="" disabled selected>Selecione um nível...</option>
-                        <option value="np">NP Membership (Sem Fins Lucrativos)</option>
-                        <option value="bronze">Membresia Bronze</option>
-                        <option value="silver">Membresia Prata</option>
-                        <option value="gold">Membresia Ouro</option>
-                    </select>
-                </label>
+                <fieldset class="grupo-radio">
+                    <legend>Nível de Associação *</legend>
+
+                    <label class="opcao-radio">
+                        <input type="radio" name="membership-level" value="np" required>
+                        NP (Sem fins lucrativos)
+                    </label>
+
+                    <label class="opcao-radio">
+                        <input type="radio" name="membership-level" value="bronze">
+                        Bronze
+                    </label>
+
+                    <label class="opcao-radio">
+                        <input type="radio" name="membership-level" value="silver">
+                        Prata
+                    </label>
+
+                    <label class="opcao-radio">
+                        <input type="radio" name="membership-level" value="gold">
+                        Ouro
+                    </label>
+                </fieldset>
 
                 <label>
                     Descrição da Atividade / Organização
@@ -121,25 +135,25 @@
                 <h2>Níveis de Associação</h2>
 
                 <div class="card np-card">
-                    <h4>Associação NP</h4>
+                    <h3>Associação NP</h3>
                     <p>Para organizações sem fins lucrativos.</p>
                     <button type="button" class="open-modal" data-modal="modal-np">Saiba mais</button>
                 </div>
 
                 <div class="card bronze-card">
-                    <h4>Associação Bronze</h4>
+                    <h3>Associação Bronze</h3>
                     <p>Ideal para pequenas empresas locais.</p>
                     <button type="button" class="open-modal" data-modal="modal-bronze">Saiba mais</button>
                 </div>
 
                 <div class="card silver-card">
-                    <h4>Associação Prata</h4>
+                    <h3>Associação Prata</h3>
                     <p>Aceleração e visibilidade no mercado.</p>
                     <button type="button" class="open-modal" data-modal="modal-silver">Saiba mais</button>
                 </div>
 
                 <div class="card gold-card">
-                    <h4>Associação Ouro</h4>
+                    <h3>Associação Ouro</h3>
                     <p>Benefícios exclusivos e posição de destaque.</p>
                     <button type="button" class="open-modal" data-modal="modal-gold">Saiba mais</button>
                 </div>

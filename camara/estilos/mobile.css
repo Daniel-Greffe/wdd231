@@ -99,6 +99,15 @@ body {
   display: block;
 }
 
+/* Reseta o alinhamento da seção do radio */
+.grupo-radio {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
 .lista-navegacao {
   list-style: none;
   display: flex;
@@ -144,6 +153,7 @@ body {
   border-radius: 8px;
   box-shadow: var(--sombra-padrao);
 }
+
 
 .imagem-hero {
   width: 100%;
@@ -500,7 +510,6 @@ dialog h2 {
 }
 
 .join-form input,
-.join-form select,
 .join-form textarea {
   padding: 0.75rem;
   border: 1px solid var(--cor-linha-divisoria);
@@ -549,6 +558,9 @@ dialog h2 {
   border: 1px solid var(--cor-linha-divisoria);
   border-left: 6px solid var(--cor-marca);
   border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  max-width: 600px;
 }
 
 .card {
@@ -572,12 +584,6 @@ dialog h2 {
   margin-top: 0.8rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-}
-
-.summary-card {
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  max-width: 600px;
 }
 
 .summary-card p {
@@ -652,6 +658,7 @@ dialog::backdrop {
     opacity: 0;
     transform: translateX(100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -663,8 +670,46 @@ dialog::backdrop {
     opacity: 0;
     transform: translateX(-100px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+
+fieldset.grupo-radio {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left !important;
+}
+
+fieldset.grupo-radio legend {
+  font-weight: bold;
+  padding: 0 0.4rem;
+}
+
+fieldset.grupo-radio label.opcao-radio {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0.6rem !important;
+  width: auto !important;
+  margin: 0.6rem 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+fieldset.grupo-radio label.opcao-radio input[type="radio"] {
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  cursor: pointer;
 }
