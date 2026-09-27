@@ -209,7 +209,6 @@ body {
 .cartao-info,
 .exibicao-grade .cartao-membro,
 .join-form,
-.card,
 .summary-card,
 dialog,
 dialog.membership-modal {
@@ -546,7 +545,6 @@ dialog h2 {
   margin-bottom: 0.5rem;
 }
 
-.card,
 .summary-card {
   border: 1px solid var(--cor-linha-divisoria);
   border-left: 6px solid var(--cor-marca);
@@ -555,6 +553,14 @@ dialog h2 {
 
 .card {
   padding: 1.2rem;
+  border: 1px solid var(--cor-linha-divisoria);
+  border-left: 6px solid var(--cor-marca);
+  border-radius: 8px;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  background-color: var(--cor-fundo-painel);
+  box-shadow: var(--sombra-padrao);
 }
 
 .card h4 {
@@ -632,11 +638,6 @@ dialog::backdrop {
   backdrop-filter: blur(2px);
 }
 
-.card {
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
 
 .card:nth-of-type(odd) {
   animation-name: slideFromRight;
