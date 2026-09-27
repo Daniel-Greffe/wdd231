@@ -96,13 +96,13 @@
                         title="Nome completo da empresa ou instituição">
                 </label>
 
-                <label class="select-label">
-                    Nível de Associação*
-                    <select name="nivel" id="nivel" required title="Selecione o nível de associação desejado">
-                        <option value="np">Associação NP (Sem fins lucrativos - Gratuita)</option>
-                        <option value="bronze">Associação Bronze</option>
-                        <option value="silver">Associação Prata</option>
-                        <option value="gold">Associação Ouro</option>
+                <label for="membership-level">Nível de Membresia:
+                    <select id="membership-level" name="membership-level" required>
+                        <option value="" disabled selected>Selecione um nível...</option>
+                        <option value="np">NP Membership (Sem Fins Lucrativos)</option>
+                        <option value="bronze">Membresia Bronze</option>
+                        <option value="silver">Membresia Prata</option>
+                        <option value="gold">Membresia Ouro</option>
                     </select>
                 </label>
 
@@ -118,7 +118,7 @@
             </form>
 
             <section class="cards-container">
-                <h3>Níveis de Associação</h3>
+                <h2>Níveis de Associação</h2>
 
                 <div class="card np-card">
                     <h4>Associação NP</h4>
