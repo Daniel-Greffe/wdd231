@@ -1,0 +1,158 @@
+/* ===================================================
+   S05 - ESTILOS ESPECÍFICOS DA PÁGINA SOBRE/DESCOBRIR
+   =================================================== */
+
+#conteudo-principal h1 {
+  color: var(--cor-marca);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.painel-mensagem-visita {
+  background-color: var(--cor-fundo-painel);
+  border: 6px solid var(--cor-destaque);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--sombra-padrao);
+  font-weight: bold;
+  color: var(--cor-texto-principal);
+  text-align: center;
+}
+
+.secao-apresentacao-cidade {
+  background-color: var(--cor-fundo-painel);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--cor-linha-divisoria);
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra-padrao);
+}
+
+.secao-apresentacao-cidade h2 {
+  color: var(--cor-marca);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------------
+   DISPOSIÇÃO COM GRID AREAS NOMEADAS (MOBILE: 320px - 640px)
+   --------------------------------------------------- */
+.galeria-locais-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+.cartao-local.item-1 { grid-area: card1; }
+.cartao-local.item-2 { grid-area: card2; }
+.cartao-local.item-3 { grid-area: card3; }
+.cartao-local.item-4 { grid-area: card4; }
+.cartao-local.item-5 { grid-area: card5; }
+.cartao-local.item-6 { grid-area: card6; }
+.cartao-local.item-7 { grid-area: card7; }
+.cartao-local.item-8 { grid-area: card8; }
+
+.cartao-local {
+  background-color: var(--cor-fundo-painel);
+  border: 1px solid var(--cor-linha-divisoria);
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: var(--sombra-padrao);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cartao-local h2 {
+  color: var(--cor-marca);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.figura-local {
+  margin: 0 0 1rem 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.figura-local img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+.endereco-local {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+.descricao-local {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.botao-saiba-mais {
+  background-color: var(--cor-marca);
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: start;
+  transition: background-color 0.3s;
+}
+
+.botao-saiba-mais:hover {
+  background-color: var(--cor-destaque);
+}
+
+/* ---------------------------------------------------
+   LAYOUT MÉDIO / TABLET (641px - 1024px)
+   --------------------------------------------------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .galeria-locais-grid {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* ---------------------------------------------------
+   LAYOUT GRANDE / DESKTOP (1025px+) E EFEITO HOVER
+   --------------------------------------------------- */
+@media (min-width: 1025px) {
+  .galeria-locais-grid {
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 card    ";
+  }
+
+  /* Requisito: Efeito de flutuação/transformação na imagem SOMENTE em telas grandes */
+  .figura-local img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .figura-local:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.08);
+  }
+}

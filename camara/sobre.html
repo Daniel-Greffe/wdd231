@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Associar-se | Câmara de Comércio</title>
-    <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Campo Grande MS.">
+    <title>Sobre e Descobrir | Câmara de Comércio de Campo Grande MS</title>
+    <meta name="description" content="Conheça os principais pontos turísticos, culturais e econômicos de Campo Grande - MS e saiba mais sobre o ecossistema empresarial da região.">
     <meta name="author" content="Daniel Greffe Cardoso">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Agradecimento | Câmara de Comércio">
-    <meta property="og:description"
-        content="Obrigado por se associar à Câmara de Comércio de Campo Grande, segue o modelo dos seus dados cadastrados.">
+    <meta property="og:title" content="Sobre e Descobrir | Câmara de Comércio de Campo Grande MS">
+    <meta property="og:description" content="Descubra atrações e dados representativos de Campo Grande MS para potenciais membros e visitantes da Câmara de Comércio.">
     <meta property="og:image" content="https://daniel-greffe.github.io/wdd231/camara/imagens/github.svg">
-    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/agradecimento.html">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/camara/sobre.html">
 
     <link rel="icon" href="imagens/f4vicon.png">
 
@@ -24,8 +23,9 @@
     <link rel="stylesheet" href="estilos/normalizar.css">
     <link rel="stylesheet" href="estilos/mobile.css">
     <link rel="stylesheet" href="estilos/desktop.css">
-
-    <script src="scripts/agradecimento.js" defer></script>
+    <link rel="stylesheet" href="estilos/sobre.css">
+    
+    <script type="module" src="scripts/sobre.mjs" defer></script>
 </head>
 
 <body>
@@ -47,20 +47,36 @@
                 <ul class="lista-navegacao">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="diretorio.html">Diretório</a></li>
-                    <li><a href="associacao.html" class="ativo">Associar-se</a></li>
-                    <li><a href="sobre.html">Descobrir</a></li>
+                    <li><a href="associacao.html">Associar-se</a></li>
+                    <li><a href="sobre.html" class="ativo">Descobrir</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="thank-you-container">
-        <h2>Obrigado por se associar!</h2>
-        <p>Recebemos a sua solicitação. Abaixo estão os dados cadastrados em nosso sistema:</p>
+    <main id="conteudo-principal">
+        <!-- H1 Obrigatório para validação e hierarquia -->
+        <h1>Descubra Campo Grande - MS</h1>
 
-        <div class="summary-card" id="formDataDisplay">
-        </div>
+        <!-- Mensagem dinâmica de visitas via localStorage -->
+        <aside id="mensagem-visita" class="painel-mensagem-visita" aria-live="polite"></aside>
+
+        <section class="secao-apresentacao-cidade">
+            <h2>A Cidade Morena</h2>
+            <p>Com uma população estimada em mais de 900 mil habitantes em 2026, Campo Grande é o coração econômico e cultural de Mato Grosso do Sul. A cidade combina infraestrutura moderna, forte setor de serviços e agronegócio com áreas verdes exuberantes, oferecendo oportunidades únicas para empresários e qualidade de vida incomparável para moradores e visitantes.</p>
+        </section>
+
+        <!-- Container com CSS Grid Areas -->
+        <section id="galeria-locais" class="galeria-locais-grid"></section>
+
+        <!-- Modal para o botão 'Saiba mais' -->
+        <dialog id="modal-detalhes" class="membership-modal">
+            <button id="fechar-modal" class="close-modal" aria-label="Fechar janela">✕</button>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+        </dialog>
     </main>
+
     <footer class="rodape-principal">
         <div class="rodape-conteudo">
             <div class="info-contato">
@@ -72,10 +88,10 @@
             <div class="faixa-redes-sociais">
                 <div class="redes-sociais">
                     <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                        <img src="imagens/instagram.svg" alt="Instagram" width="50" height="50">
+                        <img src="imagens/instagram.svg" alt="Instagram">
                     </a>
                     <a href="https://github.com" target="_blank" aria-label="GitHub">
-                        <img src="imagens/github.svg" alt="GitHub" width="50" height="50">
+                        <img src="imagens/github.svg" alt="GitHub">
                     </a>
                 </div>
             </div>
