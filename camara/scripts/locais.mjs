@@ -44,7 +44,7 @@ export const locaisInteresse = [
     nome: "Morada dos Baís",
     endereco: "Av. Noroeste, 5140 - Centro, Campo Grande - MS",
     descricao: "Prédio histórico de 1918, um dos primeiros edifícios em alvenaria da cidade, centro de exposições artísticas e preservação da memória local.",
-    imagem: "imagens/morada-bais.webp",
+    imagem: "imagens/morada-dos-bais.webp",
     alt: "Morada dos Baís patrimônio histórico de Campo Grande"
   },
   {
@@ -60,7 +60,7 @@ export const locaisInteresse = [
     nome: "Praça das Araras",
     endereco: "Praça União, s/n - Amambaí, Campo Grande - MS",
     descricao: "Praça icônica com esculturas gigantes de araras criadas pelo artista Cleir, símbolo do orgulho e da preservação ambiental da Cidade Morena.",
-    imagem: "imagens/praca-araras.webp",
+    imagem: "imagens/praca-das-araras.webp",
     alt: "Praça das Araras esculturas monumentais em Campo Grande"
   }
 ];

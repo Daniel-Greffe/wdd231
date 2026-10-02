@@ -22,6 +22,10 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+  flex-wrap:nowrap;
+}
+
 .cabecalho-principal,
 .rodape-principal {
   background-color: var(--cor-marca);
