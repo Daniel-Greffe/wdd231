@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Variáveis e Configurações Globais
+   ========================================================================== */
+:root {
+    --cor-principal: #2E6F40;
+    --cor-secundaria: #8EA860;
+    --cor-fundo: #F3F7F0;
+    --cor-texto: #1C281F;
+    --cor-branca: #FFFFFF;
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Aplicações das Cores do Esquema
+   ========================================================================== */
+.cor-principal {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+}
+
+.cor-secundaria {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+}
+
+.cor-fundo {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    border: 1px solid #C2D1BC;
+}
+
+.cor-texto {
+    background-color: var(--cor-texto);
+    color: var(--cor-branca);
+}
+
+.fonte-titulo {
+    font-family: var(--fonte-titulo);
+}
+
+.fonte-corpo {
+    font-family: var(--fonte-corpo);
+}
+
+/* ==========================================================================
+   Cabeçalho
+   ========================================================================== */
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1,
+header h2 {
+    font-family: var(--fonte-titulo);
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Estrutura Principal e Seções
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.secao-plano {
+    background-color: var(--cor-branca);
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border-left: 6px solid var(--cor-secundaria);
+    border-right: 6px solid var(--cor-secundaria);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.secao-plano h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.secao-plano p {
+    margin-bottom: 0.8rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   Amostras de Cores
+   ========================================================================== */
+.amostras-cor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 1.2rem;
+}
+
+.caixa-cor {
+    padding: 1.2rem;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-weight: bold;
+}
+
+.caixa-cor small {
+    font-weight: normal;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Wireframes
+   ========================================================================== */
+.container-wireframe {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.caixa-wireframe {
+    width: 100%;
+    max-width: 700px;
+    background: var(--cor-branca);
+    padding: 1rem;
+    text-align: center;
+}
+
+.caixa-wireframe h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.moldura-imagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-secundaria);
+}
+
+.moldura-imagem img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.moldura-imagem.mobile img {
+    max-height: 450px;
+}
+
+.moldura-imagem.desktop img {
+    max-height: 350px;
+}
+
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    color: var(--cor-principal);
+    font-weight: bold;
+}

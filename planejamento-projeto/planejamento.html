@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento do Site - Flora&Co</title>
+    <meta name="description" content="Documento de planejamento do site Flora&Co para a disciplina WDD 231.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos/planejamento.css">
+</head>
+
+<body>
+    <header>
+        <h1>Plano do Site: Flora&Co</h1>
+        <h2>Daniel Greffe Cardoso</h2>
+        <p>WDD 231 - Projeto Final</p>
+    </header>
+
+    <main>
+        <section class="secao-plano">
+            <h2>1. Nome do Site</h2>
+            <p><strong>Nome escolhido:</strong> Flora&Co — Comunidade de Cuidados com Plantas</p>
+            <p><strong>Razão da escolha:</strong> O nome "Flora&Co" é direto e explicativo. Transmite imediatamente a
+                ideia de uma biblioteca sobre a flora cotidiana e espécies exóticas, unindo entusiastas e promovendo a
+                preservação por meio do conhecimento e colaboração.</p>
+        </section>
+
+        <section class="secao-plano">
+            <h2>2. Finalidade do Site</h2>
+            <p>O site tem co objetivo de educar e engajar pessoas interessadas no cultivo e manutenção de plantas
+                comuns e exóticas. Ele fornecerá uma biblioteca com filtros de busca, orientações
+                essenciais de rega e iluminação para evitar a perda de espécies no dia a dia, e um formulário de
+                filiação para membros da comunidade que desejam receber atualizações e colaborar com sugestões de dados.
+            </p>
+        </section>
+
+        <section class="secao-plano">
+            <h2>3. Cenários</h2>
+            <ul>
+                <li><strong>Cenário 1:</strong> "Adquiri uma planta exótica para o meu apartamento, mas não sei qual a
+                    frequência correta de rega nem a quantidade de luz solar que ela necessita. Como encontro os
+                    cuidados essenciais para que ele continue saudável?"</li>
+                <li><strong>Cenário 2:</strong> "Sou um apaixonado por plantas raras e gostaria de me filiar à comunidade
+                    Flora&Co para receber destaques semanais de plantas fáceis de cuidar e sugerir novos dados, sobre
+                    espécies da minha região."</li>
+            </ul>
+        </section>
+
+        <section class="secao-plano">
+            <h2>4. Esquema de Cores</h2>
+            <p>A paleta foi selecionada em tons naturais e neutros para transmitir sensação de natureza, vida e
+                equilíbrio visual:</p>
+
+            <div class="amostras-cor">
+                <div class="caixa-cor cor-principal">
+                    <span>#2E6F40</span>
+                    <small>Verde Floresta (Cabeçalhos, Destaques e Links)</small>
+                </div>
+                <div class="caixa-cor cor-secundaria">
+                    <span>#8EA860</span>
+                    <small>Verde Sálvia (Bordas, Botões e Acentos)</small>
+                </div>
+                <div class="caixa-cor cor-fundo">
+                    <span>#F3F7F0</span>
+                    <small>Verde Claro Off-White (Fundo Geral)</small>
+                </div>
+                <div class="caixa-cor cor-texto">
+                    <span>#1C281F</span>
+                    <small>Verde Musgo Escuro (Corpo de Texto Principal)</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-plano">
+            <h2>5. Tipografia</h2>
+            <p>Fontes carregadas diretamente via Google Fonts e aplicadas neste documento:</p>
+            <ul>
+                <li><strong class="fonte-titulo">Montserrat (Sans-serif):</strong> Aplicada aos títulos (H1, H2, H3) e
+                    elementos de navegação por sua estrutura marcante.</li>
+                <li><strong class="fonte-corpo">Roboto (Sans-serif):</strong> Aplicada ao corpo dos textos, parágrafos e
+                    listas para garantir facilidade de leitura em telas móveis e computadores.</li>
+            </ul>
+        </section>
+
+        <section class="secao-plano">
+            <h2>6. Wireframe (Esboço do Layout)</h2>
+            <p>Planejamento visual das estruturas mobile e desktop para a página principal:</p>
+
+            <div class="container-wireframe">
+                <div class="caixa-wireframe">
+                    <h3>Visualização Mobile (Celular)</h3>
+                    <div class="moldura-imagem mobile">
+                        <img src="imagens/visualizacao-mobile.png" alt="Wireframe do layout mobile do site Flora & Guia"
+                            loading="lazy">
+                    </div>
+                </div>
+
+                <div class="caixa-wireframe">
+                    <h3>Visualização Desktop (Computador)</h3>
+                    <div class="moldura-imagem desktop">
+                        <img src="imagens/visualizacao-desktop.png"
+                            alt="Wireframe do layout desktop do site Flora & Guia" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="ano-atual">2026</span> Flora&Co | Daniel Greffe Cardoso | Brasil &#x1F1E7;&#x1F1F7;</p>
+    </footer>
+
+    <script>
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
