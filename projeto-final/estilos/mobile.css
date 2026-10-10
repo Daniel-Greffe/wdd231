@@ -32,6 +32,7 @@ body {
    ========================================================================== */
 .cabecalho-principal {
     background-color: var(--cor-principal);
+    color: var(--cor-branca);
     width: 100%;
     border-bottom: 2px solid var(--cor-texto);
     position: relative;
@@ -40,6 +41,7 @@ body {
 
 .cabecalho-conteudo {
     width: 100%;
+    color: var(--cor-branca);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.8rem 1rem;
