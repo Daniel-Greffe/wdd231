@@ -181,7 +181,7 @@ main {
 }
 
 .btn-cta {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-principal);
     color: var(--cor-branca);
     font-family: var(--fonte-titulo);
     font-weight: bold;

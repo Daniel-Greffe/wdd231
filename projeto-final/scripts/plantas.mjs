@@ -41,16 +41,21 @@ function renderizarGrid(plantas) {
   const msgVazio = document.getElementById('mensagem-vazio');
   if (msgVazio) msgVazio.classList.add('mensagem-oculta');
 
-  containerGrid.innerHTML = plantas.map(p => `
-    <article class="card-planta">
-        <img src="imagens/${p.imagem}" alt="Foto da planta ${p.nome}" loading="lazy" width="110" height="110">
-        <div>      
+  containerGrid.innerHTML = plantas.map((p, index) => {
+    const ePrimeiro = index < 3;
+    const loadingAttr = ePrimeiro ? 'loading="eager"' : 'loading="lazy"';
+    const fetchPriorityAttr = ePrimeiro ? 'fetchpriority="high"' : '';
+
+    return `
+      <article class="card-planta">
+        <img src="imagens/${p.imagem}" alt="Foto da planta ${p.nome}" width="300" height="200" ${loadingAttr} ${fetchPriorityAttr}>
         <h3>${p.nome}</h3>
-      <p class="nome-cientifico">${p.nomeCientifico}</p>
-      <div class="raridade">${p.estrelas}</div>
-      <button class="btn-detalhes" data-id="${p.id}">Ver Cuidados</button>
-    </article>
-  `).join('');
+        <p class="nome-cientifico">${p.nomeCientifico}</p>
+        <div class="raridade">${p.estrelas}</div>
+        <button class="btn-detalhes" data-id="${p.id}">Ver Cuidados</button>
+      </article>
+    `;
+  }).join('');
 
   document.querySelectorAll('.btn-detalhes').forEach(btn => {
     btn.addEventListener('click', (e) => {
