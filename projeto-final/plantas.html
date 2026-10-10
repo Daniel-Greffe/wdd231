@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora&Co - Catálogo e Filtros de Espécies</title>
+    <meta name="description"
+        content="Explore o catálogo completo de plantas da Flora&Co e filtre por nome ou nível de raridade.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Flora&Co - Catálogo de Espécies">
+    <meta property="og:description" content="Pesquise por mais de 20 espécies brasileiras e exóticas no nosso acervo.">
+    <meta property="og:image" content="imagens/favicon.ico">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/projeto-final/plantas.html">
+
+    <link rel="icon" href="imagens/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css" media="(min-width: 900px)">
+
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/plantas.mjs"></script>
+</head>
+
+<body>
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+            <div class="logotipo-container">
+                <img src="imagens/favicon.ico" alt="Logotipo da Flora&Co" class="logotipo-img">
+                <span class="titulo-site">Flora&Co</span>
+            </div>
+
+            <button id="btn-menu" aria-label="Abrir Menu de Navegação">☰</button>
+
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="plantas.html" class="ativa">Pesquisar Plantas</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao-filtros">
+            <h1 class="titulo-principal nova-planta">Guia e Filtro de Espécies</h1>
+            <p class="texto-explicacao centralizado">
+                Encontre a planta ideal para o seu ambiente.  Use os botões abaixo para filtrar por nível de raridade ou
+                digite o nome no campo de busca.
+            </p>
+
+            <div class="painel-controle">
+                <div class="grupo-busca">
+                    <label for="campo-busca"><strong>Buscar Planta:</strong></label>
+                    <input type="text" id="campo-busca" placeholder="Ex: Jiboia, Cacto, Monstera..."
+                        class="input-estilizado">
+                </div>
+
+                <div class="grupo-botoes-filtro">
+                    <span><strong>Nível de Raridade:</strong></span>
+                    <button class="btn-filtro ativo" data-raridade="todas">Todas</button>
+                    <button class="btn-filtro" data-raridade="1">★☆☆ (Comum)</button>
+                    <button class="btn-filtro" data-raridade="2">★★☆ (Médio)</button>
+                    <button class="btn-filtro" data-raridade="3">★★★ (Raro)</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-catalogo">
+            <div id="grid-plantas" class="grid-cards">
+            </div>
+            <p id="mensagem-vazio" class="mensagem-oculta">Nenhuma planta encontrada para os filtros selecionados.</p>
+        </section>
+
+        <dialog id="modal-planta" class="dialogo-modal">
+            <div class="modal-conteudo">
+                <button class="fechar-modal" aria-label="Fechar Modal">✕</button>
+                <div id="modal-body"></div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <p>&copy; <span id="ano-atual"></span> Flora&Co | Daniel Greffe Cardoso | Brasil &#x1F1E7;&#x1F1F7;</p>
+            <p id="ultima-modificacao"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

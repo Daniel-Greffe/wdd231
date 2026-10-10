@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora&Co - Confirmação de Inscrição</title>
+    <meta name="description"
+        content="Agradecimento pela inscrição na comunidade Flora&Co. Veja o resumo dos seus dados.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+
+    <link rel="icon" href="imagens/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css" media="(min-width: 900px)">
+
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/obrigado.mjs"></script>
+</head>
+
+<body>
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+            <div class="logotipo-container">
+                <img src="imagens/favicon.ico" alt="Logotipo da Flora&Co" class="logotipo-img">
+                <span class="titulo-site">Flora&Co</span>
+            </div>
+
+            <button id="btn-menu" aria-label="Abrir Menu de Navegação">☰</button>
+
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="plantas.html">Pesquisar Plantas</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="thank-you-container">
+        <h1 class="titulo-principal">Bem-vindo(a) à Flora&Co!</h1>
+        <p class="texto-explicacao centralizado">Sua inscrição foi efetuada com sucesso. Confira abaixo o resumo dos
+            dados cadastrados:</p>
+
+        <div class="summary-card" id="formDataDisplay">
+            <!-- Dados preenchidos dinamicamente por JS via URLSearchParams -->
+        </div>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <p>&copy; <span id="ano-atual"></span> Flora&Co | Daniel Greffe Cardoso | Brasil &#x1F1E7;&#x1F1F7;</p>
+            <p id="ultima-modificacao"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

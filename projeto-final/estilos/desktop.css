@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Ajustes para Telas Amplas (Desktop >= 900px)
+   ========================================================================== */
+#btn-menu {
+    display: none;
+}
+
+#menu-nav {
+    display: block !important;
+    width: auto;
+    margin-top: 0;
+}
+
+#menu-nav ul {
+    flex-direction: row;
+    gap: 25px;
+}
+
+#menu-nav li {
+    border-bottom: none;
+}
+
+#menu-nav a {
+    padding: 8px 12px;
+}
+
+.grid-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#grid-plantas {
+    min-height: 450px;
+}
+
+.hero-overlay {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+}
+
+.hero-overlay h2 {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.join-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.painel-controle {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupo-busca {
+    flex: 1;
+    max-width: 400px;
+}   

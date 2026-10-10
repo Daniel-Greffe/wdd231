@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flora&Co - Comunidade e Guia de Plantas</title>
+    <meta name="description"
+        content="Flora&Co é a sua comunidade colaborativa de cuidados e preservação de espécies vegetais comuns e exóticas.">
+    <meta name="author" content="Daniel Greffe Cardoso">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Flora&Co - Comunidade de Plantas">
+    <meta property="og:description"
+        content="Aprenda cuidados essenciais, descubra espécies exóticas e junte-se à nossa comunidade botânica.">
+    <meta property="og:image" content="imagens/hero-desktop.jpg">
+    <meta property="og:url" content="https://daniel-greffe.github.io/wdd231/projeto-final/index.html">
+
+    <link rel="icon" href="imagens/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos/mobile.css">
+    <link rel="stylesheet" href="estilos/desktop.css" media="(min-width: 900px)">
+
+    <script type="module" src="scripts/main.mjs"></script>
+    <script type="module" src="scripts/plantas.mjs"></script>
+</head>
+
+<body>
+    <header class="cabecalho-principal">
+        <div class="cabecalho-conteudo">
+            <div class="logotipo-container">
+                <img src="imagens/favicon.ico" alt="Logotipo da Flora&Co" class="logotipo-img">
+                <span class="titulo-site">Flora&Co</span>
+            </div>
+
+            <button id="btn-menu" aria-label="Abrir Menu de Navegação">☰</button>
+
+            <nav id="menu-nav">
+                <ul>
+                    <li><a href="index.html" class="ativa">Início</a></li>
+                    <li><a href="plantas.html">Pesquisar Plantas</a></li>
+                    <li><a href="comunidade.html">Comunidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1 class="titulo-principal">Flora&Co</h1>
+
+            <div class="imagem-destaque hero-container">
+                <picture>
+                    <source srcset="imagens/muitas-plantas.webp" media="(min-width: 768px)">
+                    <img src="imagens/muitas-plantas-mobile.webp" alt="Jardim verde e plantas tropicais vivas"
+                        width="640" height="360" loading="eager">
+                </picture>
+                <div class="hero-overlay">
+                    <h2>Faça Parte da Nossa Comunidade</h2>
+                    <a href="comunidade.html" class="btn-cta">Junte-se a nós!</a>
+                </div>
+            </div>
+
+            <h2 class="subtitulo-principal">Preservando o Verde no Seu Cotidiano</h2>
+            <p class="texto-explicacao">
+                Muitas plantas morrem diariamente em nossos lares por falta de informações básicas sobre luz, rega e
+                adubação.
+                A <strong>Flora&Co</strong> nasceu para conectar pessoas apaixonadas pela natureza, oferecendo
+                orientações simples e práticas para plantas do dia a dia e espécies exóticas raras.
+            </p>
+        </section>
+
+        <section class="secao-catalogo">
+            <h2 class="subtitulo-secao">Destaques Fáceis de Cuidar</h2>
+            <div id="grid-plantas" class="grid-cards">
+            </div>
+        </section>
+
+        <dialog id="modal-planta" class="dialogo-modal">
+            <div class="modal-conteudo">
+                <button class="fechar-modal" aria-label="Fechar Modal">✕</button>
+                <div id="modal-body"></div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="rodape-conteudo">
+            <p>&copy; <span id="ano-atual"></span> Flora&Co | Daniel Greffe Cardoso | Brasil &#x1F1E7;&#x1F1F7;</p>
+            <p id="ultima-modificacao"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

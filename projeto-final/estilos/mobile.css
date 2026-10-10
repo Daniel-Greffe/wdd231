@@ -1,0 +1,470 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis de Cores
+   ========================================================================== */
+:root {
+    --cor-principal: #2E6F40;
+    --cor-secundaria: #8EA860;
+    --cor-fundo: #EAF2E8;
+    --cor-texto: #1C281F;
+    --cor-branca: #FFFFFF;
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Cabeçalho e Menu Responsivo
+   ========================================================================== */
+.cabecalho-principal {
+    background-color: var(--cor-principal);
+    width: 100%;
+    border-bottom: 2px solid var(--cor-texto);
+    position: relative;
+    z-index: 100;
+}
+
+.cabecalho-conteudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logotipo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.titulo-site {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-branca);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#btn-menu {
+    background: none;
+    border: none;
+    color: var(--cor-branca);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#menu-nav {
+    display: none;
+    width: 100%;
+    margin-top: 0.8rem;
+}
+
+#menu-nav.aberto {
+    display: block;
+}
+
+#menu-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-nav li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#menu-nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-family: var(--fonte-titulo);
+    font-size: 1.1rem;
+    padding: 12px 0;
+    display: block;
+    text-align: center;
+}
+
+#menu-nav a.ativa {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* ==========================================================================
+   Hero Section e CTA
+   ========================================================================== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1100px;
+    margin: 1.5rem auto;
+    padding: 0 15px;
+}
+
+.hero-section {
+    background: var(--cor-branca);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-top: 3px solid var(--cor-secundaria);
+    border-bottom: 3px solid var(--cor-secundaria);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.titulo-principal {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28, 40, 31, 0.75);
+    color: var(--cor-branca);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-overlay h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.btn-cta {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #A4C272;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+/* ==========================================================================
+   Cards e Grids de Plantas
+   ========================================================================== */
+.secao-catalogo {
+    margin-top: 2rem;
+}
+
+.subtitulo-secao,
+.subtitulo-principal {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#grid-plantas {
+    min-height: 450px; 
+}
+
+.card-planta {
+    background: var(--cor-branca);
+    border-radius: 10px;
+    padding: 1.2rem;
+    border: 1px solid #D1E0CE;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-planta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.8rem;
+}
+
+.card-planta h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+}
+
+.nome-cientifico {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.raridade {
+    background-color: var(--cor-fundo);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--cor-principal);
+    font-size: 0.85rem;
+    width: fit-content;
+    margin-bottom: 0.8rem;
+}
+
+.btn-detalhes {
+    margin-top: auto;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--fonte-titulo);
+}
+
+/* ==========================================================================
+   Filtros e Controles
+   ========================================================================== */
+.painel-controle {
+    background: var(--cor-branca);
+    padding: 1.3rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-estilizado {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.grupo-botoes-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-filtro {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-secundaria);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--fonte-titulo);
+}
+
+.btn-filtro.ativo,
+.btn-filtro:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+}
+
+.mensagem-oculta {
+    display: none;
+}
+
+/* ==========================================================================
+   Formulários e Layout da Comunidade
+   ========================================================================== */
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 1.5rem;
+}
+
+.join-form {
+    background: var(--cor-branca);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+fieldset {
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+legend {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 4px;
+    font-family: var(--fonte-corpo);
+}
+
+.grupo-radio label {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+}
+
+.btn-enviar {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    border: none;
+    padding: 12px 20px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-nivel {
+    background: var(--cor-branca);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-secundaria);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Modais
+   ========================================================================== */
+.dialogo-modal {
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dialogo-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-conteudo {
+    padding: 1.5rem;
+    position: relative;
+    background: var(--cor-branca);
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Página de Confirmação (obrigado.html)
+   ========================================================================== */
+.summary-card {
+    background: var(--cor-branca);
+    padding: 1.8rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--cor-principal);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    margin-top: 1.5rem;
+}
+
+.summary-card p {
+    margin-bottom: 0.8rem;
+}
+
+/* ==========================================================================
+   Rodapé
+   ========================================================================== */
+.rodape-principal {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+}
+
+.rodape-principal a {
+    color: var(--cor-branca);
+}
